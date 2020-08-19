@@ -17,6 +17,8 @@ jobs:
         fetch-depth: 0
     - name: Clone Repository
       uses: actions/checkout@master
+    - name: Install dependencies
+      run: npm test
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
       env:
